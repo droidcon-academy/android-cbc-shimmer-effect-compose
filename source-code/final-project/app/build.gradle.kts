@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.stevdza.san.shimmereffects"
+    namespace = "com.droidcon.shimmereffects"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.stevdza.san.shimmereffects"
+        applicationId = "com.droidcon.shimmereffects"
         minSdk = 24
         //noinspection EditedTargetSdkVersion
         targetSdk = 34
