@@ -34,7 +34,7 @@ fun Modifier.gradientShimmer(
     easing: Easing = LinearEasing
 ) = composed {
     val infiniteTransition = rememberInfiniteTransition(label = "Infinite Gradient Transition")
-    val animatedAngle by infiniteTransition.animateFloat(
+    val animatedDegrees by infiniteTransition.animateFloat(
         initialValue = 0f,
         targetValue = 360f,
         animationSpec = infiniteRepeatable(
@@ -49,12 +49,10 @@ fun Modifier.gradientShimmer(
     )
     clipToBounds()
         .drawWithContent {
-            drawContent()
-            rotate(degrees = animatedAngle) {
+            rotate(degrees = animatedDegrees) {
                 drawCircle(
                     brush = gradient,
-                    radius = size.width,
-                    blendMode = BlendMode.SrcIn,
+                    radius = size.width
                 )
             }
         }
@@ -68,7 +66,7 @@ fun Modifier.offsetShimmer(
     easing: Easing = FastOutSlowInEasing
 ) = composed {
     val infiniteTransition = rememberInfiniteTransition(label = "Infinite Offset Transition")
-    val animatedOffset = infiniteTransition.animateValue(
+    val animatedOffset by infiniteTransition.animateValue(
         initialValue = 0,
         targetValue = yOffset,
         animationSpec = infiniteRepeatable(
@@ -82,16 +80,16 @@ fun Modifier.offsetShimmer(
         typeConverter = Int.VectorConverter,
         label = "Offset Animation"
     )
-    offset(x = 0.dp, y = animatedOffset.value.dp)
+    offset(x = 0.dp, y = animatedOffset.dp)
         .background(backgroundColor)
 }
 
 fun Modifier.scaleShimmer(
+    backgroundColor: Color = Color.LightGray.copy(alpha = 0.5f),
     animationDuration: Int = 600,
     delay: Int = 0,
     easing: Easing = FastOutSlowInEasing
 ) = composed {
-    var completed by remember { mutableStateOf(false) }
     val infiniteTransition = rememberInfiniteTransition(label = "Infinite Scale Transition")
     val animatedScale by infiniteTransition.animateFloat(
         initialValue = 1f,
@@ -100,13 +98,12 @@ fun Modifier.scaleShimmer(
             animation = tween(
                 durationMillis = animationDuration,
                 easing = easing,
-                delayMillis = if (!completed) delay else 0
+                delayMillis = delay
             ),
             repeatMode = RepeatMode.Reverse
         ),
         label = "Scale Animation"
     )
-    completed = true
     scale(animatedScale)
-        .background(Color.LightGray.copy(alpha = 0.5f))
+        .background(backgroundColor)
 }

@@ -33,8 +33,8 @@ fun MainScreen() {
 @Composable
 fun CardPlaceholder() {
     val surface = MaterialTheme.colorScheme.surface
-    val surfaceVariant = MaterialTheme.colorScheme.tertiaryContainer
-    val defaultGradient = remember { listOf(surfaceVariant, surface) }
+    val tertiaryContainer = MaterialTheme.colorScheme.tertiaryContainer
+    val defaultGradient = remember { listOf(tertiaryContainer, surface) }
 
     Column {
         Box(

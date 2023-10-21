@@ -27,6 +27,7 @@ fun Modifier.offsetShimmer(
 }
 
 fun Modifier.scaleShimmer(
+    backgroundColor: Color = Color.LightGray.copy(alpha = 0.5f),
     animationDuration: Int = 600,
     delay: Int = 0,
     easing: Easing = FastOutSlowInEasing
