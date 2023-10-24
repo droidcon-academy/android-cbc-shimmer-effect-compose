@@ -1,4 +1,4 @@
-package com.droidcon.shimmereffects
+package com.droidcon.shimmerdemo
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

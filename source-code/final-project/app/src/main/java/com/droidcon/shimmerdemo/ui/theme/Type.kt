@@ -1,4 +1,4 @@
-package com.droidcon.shimmereffectsstarter.ui.theme
+package com.droidcon.shimmerdemo.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

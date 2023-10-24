@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.droidcon.shimmereffectsstarter"
+    namespace = "com.droidcon.shimmerdemo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.droidcon.shimmereffectsstarter"
+        applicationId = "com.droidcon.shimmerdemo"
         minSdk = 24
         //noinspection EditedTargetSdkVersion
         targetSdk = 34

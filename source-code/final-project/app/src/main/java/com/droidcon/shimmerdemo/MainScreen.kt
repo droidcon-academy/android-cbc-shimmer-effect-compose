@@ -1,4 +1,4 @@
-package com.droidcon.shimmereffects
+package com.droidcon.shimmerdemo
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

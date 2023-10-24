@@ -1,4 +1,4 @@
-package com.droidcon.shimmereffectsstarter
+package com.droidcon.shimmerdemo
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.droidcon.shimmereffectsstarter
+package com.droidcon.shimmerdemo
 
 import androidx.compose.animation.core.Easing
 import androidx.compose.animation.core.FastOutSlowInEasing

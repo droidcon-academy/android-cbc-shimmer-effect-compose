@@ -1,4 +1,4 @@
-package com.droidcon.shimmereffects.ui.theme
+package com.droidcon.shimmerdemo.ui.theme
 
 import android.app.Activity
 import android.os.Build
