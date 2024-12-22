@@ -1,9 +1,9 @@
-package com.droidcon.shimmereffectsstarter
+package com.droidcon.shimmerdemo
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.droidcon.shimmereffectsstarter.ui.theme.ShimmerEffectsStarterTheme
+import com.droidcon.shimmerdemo.ui.theme.ShimmerEffectsStarterTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
